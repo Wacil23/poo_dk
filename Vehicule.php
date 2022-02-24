@@ -1,6 +1,6 @@
 <?php 
 
-class Vehicule
+abstract class Vehicule
 {
  
     protected string $color;
@@ -12,6 +12,7 @@ class Vehicule
         $this->color = $color;
         $this->nbSeats = $nbSeats;
     }
+    
     public function forward(): string
     {
         $this->setCurrentSpeed = 25;
