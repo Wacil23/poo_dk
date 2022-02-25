@@ -1,7 +1,8 @@
 <?php
 require_once('Vehicule.php');
+require_once('Lightable.php');
 
-class Car extends Vehicule
+class Car extends Vehicule implements LightableIterface
 {
 
     private string $energy;
@@ -17,6 +18,16 @@ class Car extends Vehicule
         'fuel',
         'electric',
     ];
+
+    public function switchOn(): bool
+    {
+        return true;
+    }
+    public function switchOff(): bool
+    {
+        return false;
+    }
+
     public function setParkBrake($hasParkBrake): void
     {
         $this->hadParkBrake = $$hasParkBrake;

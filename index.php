@@ -6,6 +6,7 @@ require_once 'Truck.php';
 require_once 'HighWay.php';
 
 $tornado = new Bicycle('blue', 1);
+
 echo $tornado->forward();
 
 $HomersCar = new Car('green', 4, 'electric');
@@ -17,6 +18,8 @@ echo $tornado->brake();
 echo '<br> Vitesse du vélo : ' . $tornado->setCurrentSpeed . ' km/h' . '<br>';
 echo $tornado->brake(). '<br>';
 echo '<br>';
+$tornado->setCurrentSpeed(100);
+echo $tornado->switchOn();
 
 echo $HomersCar->start(false);
 echo $HomersCar->forward();
@@ -26,6 +29,7 @@ echo '<br> Vitesse de la voiture : ' . $HomersCar->setCurrentSpeed . ' km/h' . '
 echo $HomersCar->brake();
 echo '<br>';
 echo '<br>';
+echo $HomersCar->switchOn();
 
 $Truck->setStock(1000);
 echo $Truck->in_filling();
@@ -40,5 +44,4 @@ echo $Truck->brake();
 $motorWay = new MotorWay(4, 130);
 $pedestrianWay = new PedestrianWay(1, 10);
 $residentalWay = new ResidentalWay(2, 500);
-
 

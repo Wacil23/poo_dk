@@ -4,7 +4,7 @@ abstract class Vehicule
 {
  
     protected string $color;
-    protected int $currentSpeed;
+    protected int $currentSpeed = 0;
     protected int $nbSeats;
     protected int $nbWheels;
     public function __construct(string $color, int $nbSeats)
