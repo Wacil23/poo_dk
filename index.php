@@ -39,6 +39,6 @@ echo $Truck->brake();
 
 $motorWay = new MotorWay(4, 130);
 $pedestrianWay = new PedestrianWay(1, 10);
-$residentalWay = new ResidentalWay(2, 50);
+$residentalWay = new ResidentalWay(2, 500);
 
 
