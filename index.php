@@ -4,6 +4,7 @@ require_once 'Car.php';
 require_once 'Vehicule.php';
 require_once 'Truck.php';
 require_once 'HighWay.php';
+require_once './KmToMiles/Speedometer.php';
 
 $tornado = new Bicycle('blue', 1);
 
@@ -45,3 +46,7 @@ $motorWay = new MotorWay(4, 130);
 $pedestrianWay = new PedestrianWay(1, 10);
 $residentalWay = new ResidentalWay(2, 500);
 
+echo '<br>';
+echo Speedometer::kmToMiles(10) .' Miles';
+echo '<br>';
+echo Speedometer::milesToKm(10) . ' Kilomètres';
